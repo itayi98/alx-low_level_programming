@@ -15,7 +15,7 @@ char *move(char *s2);
 int wildcmp(char *s1, char *s2)
 {
 	/**
-	 * this is going to a sum of variable
+	 * this is going to be a sum of variable
 	 */
 	int sum = 0;
 
@@ -39,7 +39,7 @@ int wildcmp(char *s1, char *s2)
 	}
 	/**
 	 * if we reached the end of both strings
-	 * retunf 0
+	 * return 0
 	 */
 	if (*s1 == '\0' || *s2 == '\0')
 		return (0);
