@@ -15,7 +15,7 @@ char *move(char *s2);
 int wildcmp(char *s1, char *s2)
 {
 	/**
-	 * this is going to be a sum of variable
+	 * this is going to be a sum of return values
 	 */
 	int sum = 0;
 
@@ -29,7 +29,7 @@ int wildcmp(char *s1, char *s2)
 	/**
 	 * if the chars are equal in both strings,
 	 * if we reached the end of s1, return 1
-	 * else increament s1 and s2 by 1
+	 * else increment s1 and s2 by 1
 	 */
 	if (*s1 == *s2)
 	{
@@ -38,14 +38,15 @@ int wildcmp(char *s1, char *s2)
 		return (wildcmp(s1 + 1, s2 + 1));
 	}
 	/**
-	 * if we reached the end of both strings
+	 * if we reached the end of both strings,
 	 * return 0
 	 */
 	if (*s1 == '\0' || *s2 == '\0')
 		return (0);
+
 	/**
 	 * if the char in s2 is a *
-	 * find the address of the first char after the *
+	 * finds the address of the first char after the *
 	 * if we reached the end of s2, return 1
 	 * if the chars are equal, add the return values
 	 * of wildcmp() to sum
@@ -98,7 +99,7 @@ char *move(char *s2)
 	/**
 	 * if the current char is a *
 	 * increment s2 by 1
-	 * else return the address of 
+	 * else return the address of
 	 * the first char past all *
 	 */
 	if (*s2 == '*')
